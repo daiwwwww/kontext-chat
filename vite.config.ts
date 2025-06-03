@@ -5,6 +5,9 @@ export default defineConfig({
 	plugins: [react()],
 	server: {
 		port: 3000,
-		host: true // Allow connections from all hosts
+		host: true,
+		hmr: {
+			clientPort: 443 // 为 HTTPS 连接设置正确的端口
+		}
 	}
 });
